@@ -1,12 +1,12 @@
     * [Introduction 关于中文屋]
     * [IntroductionEn About Chinese-Room]
-    * Javascript code prettifier
+    * [OrgPrettifier Javascript code prettifier]
         * 自述文件  [https://chinese-room.googlecode.com/svn/trunk/google-code-prettify/README-zh-Hans.html]
-    * Protocol Buffers
+    * [OrgProtobuf Protocol Buffers]
         * 开发人员指南
              * [Overview 概述]
         * [APIReference API参考]
-    * User Support for Project Hosting
+    * [OrgSupport User Support for Project Hosting
         * [GettingStarted 入门指南]
         * 维基百科
             * [WikiFAQ Wiki常见问题]
