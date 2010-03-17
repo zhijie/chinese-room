@@ -1,7 +1,7 @@
 #summary One-sentence summary of this page.
 
 #sidebar 
-  * [Articles HOWTO articles] 
+  * [HOWTO articles] 
     * [ArticlesXSS Web security] 
     * [ArticlesDom DOM manipulation] 
     * [ArticlesStyle CSS and style] 
