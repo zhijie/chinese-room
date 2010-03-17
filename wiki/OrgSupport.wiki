@@ -7,5 +7,9 @@ http://code.google.com/p/support/
 
 = 翻译完毕的文档(already translated) =
 
-* 维基百科
+ * 维基百科
   * <a herf="http://code.google.com/p/chinese-room/wiki/WikiSyntax">WikiSyntax</a>
+
+= 翻译状态 =
+
+进行中
