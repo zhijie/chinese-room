@@ -1,8 +1,9 @@
   * [Introduction 项目介绍]
   * Support
-    * [GettingStarted 入门指南]
-    * Wiki
-      * [WikiFAQ Wiki常见问题]
-      * [WikiSyntax Wiki语法]
-      * [GoogleGadgets Google 小工具]
-        * [InterestingGadgets 有趣的工具]
+   * [GettingStarted 入门指南]
+   * Wiki
+    * [WikiFAQ Wiki常见问题]
+    * [WikiSyntax Wiki语法]
+    * [GoogleGadgets Google 小工具]
+     * [InterestingGadgets 有趣的工具]
+  
