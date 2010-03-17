@@ -6,7 +6,7 @@ http://code.google.com/p/support/
 
 
 = 翻译完毕的文档(already translated) =
- *[GettingStarted GettingStarted]
+ * [GettingStarted GettingStarted]
  * Wiki
   * <a herf="http://code.google.com/p/chinese-room/wiki/WikiSyntax">WikiSyntax</a>
 
