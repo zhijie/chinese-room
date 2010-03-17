@@ -1,7 +1,7 @@
     * [Introduction 关于中文屋]
     * [IntroductionEn About Chinese-Room]
     * Javascript code prettifier
-        * README[https://chinese-room.googlecode.com/svn/trunk/google-code-prettify/README-zh-Hans.html]
+        * 自述文件[https://chinese-room.googlecode.com/svn/trunk/google-code-prettify/README-zh-Hans.html]
     * Protocol Buffers
         * 开发人员指南
              * [Overview 概述]
