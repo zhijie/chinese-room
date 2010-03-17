@@ -1,6 +1,6 @@
 #summary One-sentence summary of this page.
 
-  * [HOWTO] 
+  * HOWTO 
     * [ArticlesXSS Web security] 
     * [ArticlesDom DOM manipulation] 
     * [ArticlesStyle CSS and style] 
