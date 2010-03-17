@@ -1,13 +1,4 @@
-#summary One-sentence summary of this page.
+#summary Chinese documentations for many non-Chinese projects
 
 = Introduction =
-
-
-
-
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+  Chinese-room lives for the promotion of open source.It will help introduce excellent projects to Chinese programmers and students.If you hope your projects to be known by more Chinese programmers,please contact us and we will create Chinese documentations for your projects. 
