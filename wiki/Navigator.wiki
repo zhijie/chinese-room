@@ -6,7 +6,7 @@
         * 开发人员指南
              * [Overview 概述]
         * [APIReference API参考]
-    * [OrgSupport User Support for Project Hosting
+    * [OrgSupport User Support for Project Hosting]
         * [GettingStarted 入门指南]
         * 维基百科
             * [WikiFAQ Wiki常见问题]
