@@ -7,7 +7,7 @@ http://code.google.com/p/google-code-prettify/
 
 = 翻译完毕的文档(already translated) =
 
-README[https://chinese-room.googlecode.com/svn/trunk/google-code-prettify/README-zh-Hans.html]
+[https://chinese-room.googlecode.com/svn/trunk/google-code-prettify/README-zh-Hans.html README]
 
 = 翻译状态 =
 
