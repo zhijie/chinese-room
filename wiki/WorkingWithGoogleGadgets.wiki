@@ -174,7 +174,7 @@ http://www.gmodules.com/ig/creator?url=http://www.google.com/ig/modules/horoscop
 
 注意 &up_= 变量只接受字符
 
-== 在iGoogle 目录中提升你的小工具 == 
+== 在iGoogle 目录中推广你的小工具 == 
 按照在 http://www.google.com/ig/submit 上的指导把你的小工具添加到iGoogle目录中. 一定要包含描述性的元数据,这样你的小工具才能更容易被找到. 
 
 = 集成其他Google产品 = 
