@@ -1,4 +1,4 @@
-#summary project hosting on Google Code的快速指南
+#summary 在Google Code上托管项目的快速指南
 
 Project Hosting on Google Code 为开源提供了一个自由协作的开发环境. 每一个项目都有自己的维护人员控制、版本控制或灵活仓库(Subversion/Mercurial repository), 议题跟踪(issue tracker), 维基百科页面(wiki pages), 和下载板块(downloads section). 我们的项目维护服务(Our project hosting service)简单、快捷、可靠、可拓展, 这样一来, 你就可以专心做开源开发了. 
 
