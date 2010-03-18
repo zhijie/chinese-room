@@ -3,11 +3,11 @@
 
 = 介绍 = 
 
-在2008年我们[http://google-code-updates.blogspot.com/2008/10/gadgets-and-google-code.html 开始了小工具支持],支持遍及我们的整个项目主持服务, 这允许用户添加小工具到Wiki或项目主页. 这个指南是要给小工具的使用和创作提供一个起步指导. 
+在2008年我们[http://google-code-updates.blogspot.com/2008/10/gadgets-and-google-code.html 增加了对小工具的支持],支持遍及我们的整个项目托管服务, 这允许用户添加小工具到Wiki或项目主页. 这个指南是要给小工具的使用和创作提供一个起步指导. 
 
 = 使用已有小工具 = 
 
-很多专门的小工具已经为项目主持创建好了, 其中一些在[InterestingDeveloperGadgets 有趣的小工具]页面列出. 每个项目的订阅栏中也提供了一个自定义小工具列表(我们的[http://code.google.com/p/support/feeds support 项目]可以作为一个例子). 你也可以在http://www.google.com/ig/directory找到很多 non-developer specific 小工具 . 
+很多专门的小工具已经为项目托管创建好了, 其中一些在[InterestingDeveloperGadgets 有趣的小工具]页面列出. 每个项目的订阅栏中也提供了一个自定义小工具列表(我们的[http://code.google.com/p/support/feeds support 项目]可以作为一个例子). 你也可以在http://www.google.com/ig/directory找到很多 non-developer specific 小工具 . 
 
 使用新的`<wiki:gadget...>`语法,小工具可以添加到任何Wiki页面或项目主页,比如这个小工具: 
 
