@@ -9,7 +9,7 @@ http://code.google.com/p/support/
  * [GettingStarted GettingStarted]
  * Wiki
   * <a herf="http://code.google.com/p/chinese-room/wiki/WikiSyntax">WikiSyntax</a>
-
+  * [WorkingWithGoogleGadgets  WorkingWithGoogleGadgets ]
 = 翻译状态 =
 
 进行中
