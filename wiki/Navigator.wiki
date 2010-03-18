@@ -11,7 +11,7 @@
         * 维基百科
             * [WikiFAQ Wiki常见问题]
             * [WikiSyntax Wiki语法]
-            * [GoogleGadgets Google 小工具]
+            * [WorkingWithGoogleGadgets Google 小工具]
                 * [InterestingGadgets 有趣的工具]
         * 讨论
          * 下载
