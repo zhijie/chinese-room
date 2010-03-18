@@ -8,16 +8,13 @@
         * [APIReference API参考]
     * [OrgSupport User Support for Project Hosting]
         * [GettingStarted 入门指南]
+        * [HowToJoinAProject 加入一个项目]
+        * [SupportFAQ 项目托管常见问题]
+        * [MakingHostingBetter 让托管更棒]
         * 维基百科
             * [WikiFAQ Wiki常见问题]
             * [WikiSyntax Wiki语法]
             * [WorkingWithGoogleGadgets Google 小工具]
                 * [InterestingGadgets 有趣的工具]
         * 讨论
-         * 下载
-         * 源码
-         * 高级选项
             
-      
-        
-  
