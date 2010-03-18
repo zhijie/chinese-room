@@ -16,7 +16,7 @@ Project Hosting on Google Code 为开源提供了一个自由协作的开发环�
  * [http://opensource.org/licenses/category 如何选择许可证]. 
  * [ChoosingAVersionControlSystem 如何选择版本控制系统]. 
 
-== 操作的项目 == 
+== 项目工作 == 
 
 === 定制你的项目 === 
 
