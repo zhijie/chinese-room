@@ -10,6 +10,7 @@ http://code.google.com/p/support/
  * Wiki
   * <a herf="http://code.google.com/p/chinese-room/wiki/WikiSyntax">WikiSyntax</a>
   * [WorkingWithGoogleGadgets  WorkingWithGoogleGadgets ]
+   * [InterestingDeveloperGadgets InterestingDeveloperGadgets]
 = 翻译状态 =
 
 进行中
