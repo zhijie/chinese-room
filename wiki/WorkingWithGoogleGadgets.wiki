@@ -1,0 +1,220 @@
+#summary 在Google Code上使用和创作基本的小工具的指南
+<wiki:toc max_depth="2" /> 
+
+= 介绍 = 
+
+在2008年我们[http://google-code-updates.blogspot.com/2008/10/gadgets-and-google-code.html 开始了小工具支持],支持遍及我们的整个项目主持服务, 这允许用户添加小工具到Wiki或项目主页. 这个指南是要给小工具的使用和创作提供一个起步指导. 
+
+= 使用已有小工具 = 
+
+很多专门的小工具已经为项目主持创建好了, 其中一些在[InterestingDeveloperGadgets 有趣的小工具]页面列出. 每个项目的订阅栏中也提供了一个自定义小工具列表(我们的[http://code.google.com/p/support/feeds support 项目]可以作为一个例子). 你也可以在http://www.google.com/ig/directory找到很多 non-developer specific 小工具 . 
+
+使用新的`<wiki:gadget...>`语法,小工具可以添加到任何Wiki页面或项目主页,比如这个小工具: 
+
+{{{ 
+http://google-code-project-hosting-gadgets.googlecode.com/svn/trunk/examples/issueupdates_example.xml 
+}}} 
+
+可以使用下面的代码添加: 
+
+{{{ 
+<wiki:gadget url="http://google-code-project-hosting-gadgets.googlecode.com/svn/trunk/examples/issueupdates_example.xml" up_projectName="support" /> 
+}}} 
+
+结果是这样: 
+
+<wiki:gadget url="http://google-code-project-hosting-gadgets.googlecode.com/svn/build/prod/changes/gcChanges.xml" up_projectName="support" /> 
+
+在这个例子中, `up_projectName` 属性是一个用来明确这个小工具显示哪一个项目的信息的配置. 
+
+= 创建你自己的小工具 = 
+
+Google 小工具是可以嵌入到网页和别的应用程序中的简单的 HTML 和 Javascript 应用程序. 从开发者的角度说, 它们是封装HTML的正常的小型XML文件, XML中的元数据会被小工具API(Gadgets API)调用. 完整的文档可以在[http://code.google.com/apis/gadgets/ Gadgets API]主页找到, 下面是两个小例子. 
+
+== Hello, world! == 
+
+这个示例来自[http://code.google.com/apis/gadgets/docs/gs.html#Hello_World Getting Started 入门指南], 下面一个简单的小工具只是显示 "Hello, world!" 
+
+{{{ 
+<?xml version="1.0" encoding="UTF-8" ?>  
+<Module> 
+<ModulePrefs title="hello world example" />  
+<Content type="html"> 
+  <![CDATA[  
+    Hello, world! 
+  ]]> 
+</Content>  
+</Module> 
+}}} 
+
+== 嵌入远程 URL == 
+
+也可以使用小工具显示远程页面. 
+
+{{{ 
+<?xml version="1.0" encoding="UTF-8" ?>  
+<Module> 
+<ModulePrefs title="remote content example" /> 
+<Content type="url" href="http://code.google.com" /> 
+</Module> 
+}}} 
+
+在Wiki语句中可以指定小工具的大小: 
+
+{{{ 
+<wiki:gadget url="..." width="540" height="400" /> 
+}}} 
+
+== `type=html` 较之 `type=url` 的优点== 
+
+跟'type=url'相比,`type=html` 小工具有一些优点有一些优点: 
+
+* 缓存做得好. 在浏览器中渲染小工具IFRAME 被浏览器缓存, 那么但在此看到这个小工具是就不需要多余的网页点击. 
+* 如果使用`_IG_Fetch...()` 或 `Gadgets.io` 代理, 那些相应也会被浏览器缓存. 这意味着在可以定制的同时,即使是动态小工具也有很棒的装载性能. 
+* `type=url` 小工具致使多余的HTTP调用到小工具渲染器, 者增加了延迟. 
+* 一般情况下,type=html 小工具比 type=url 有更好的API支持. 
+
+
+在一些情况下, 这意味着你要重写一些函数, 但是这点劳动一般很小. 而且, 通过使用 API 而不是产生HTML来取得你的数据, 就可以创建别人可以用来给开发者创建混搭的API(mashup). 
+
+== 优雅降级(Gracefully Degrade) == 
+Google小工具可以在多种容器中渲染. 其中一些有着不同于其他的最终用户: 
+
+* iGoogle 用户希望能定制他们的小工具. 
+* 浏览Google Code Wiki 的人不想定制小工具; 而是由项目拥有者为浏览者定制小工具(通过传入user prefs 参数). 
+
+
+当你编写小工具时, 在脑海中要有这两种情形. 你的iGoogle 用户会欣赏那种能通过一个熟悉的界面定制的能力(编辑设置("edit settings")菜单). 
+
+如果你要调用`prefs.set()` 而且小工具在Wiki中渲染, 就会出现异常,因为那不是Google Code支持的特性. 因此, 一定要保证你的小工具既可以在iGoogle中渲染又可以在Google Code中渲染. 有一个简单的方法可以查看你的小工具是否在iGoogle中: 写一些搜索document.location找"synd=ig"的JavaScript. 如果找到了, 你就知道调用prefs.set()是安全的. 
+
+== 使用标准偏爱名(Standard Preference Names) == 
+
+Google Code 用户会使用这样的语句: 
+
+{{{ 
+<wiki:gadget url="..." up_pref1="val1" up_pref2="val2"/>  
+}}} 
+
+为了方便Wiki用户使用, 请使用标准用户偏爱名.比如: 
+
+{{{ 
+<UserPref name="projectName" display_name="Project Name" default_value="no_project_selected" /> 
+}}} 
+
+如果你用不是`projectName`的名称, 用户必须查看你的小工具来找到那个变量是什么. 这儿有一个例子: 
+
+{{{ 
+<wiki:gadget url="..." up_projectName="google-web-toolkit"/>  
+}}} 
+
+同时, 使用用户偏爱值(user pref value)指定小工具的自定义,你的小工具在不同的嵌入方法中会有更高的可移植性: 
+
+* 在"添加你的网页"("add to your webpage")表格中, (http://www.gmodules.com/ig/creator?url=http://www.google.com/ig/modules/horoscope.xml) 用表格显示用户的偏好,以便于用户可以在得到代码片段前定制小工具. 
+* 在 iGoogle, 把 UserPref 的值填写到"编辑设置"("edit settings")窗口,这样,用户可以在加入小工具后改变查询. 
+
+== 使用资源代理(Asset Proxy) == 
+
+在小工具中直接引用图像, .css,或.js 文件会引起性能问题. 不过可以利用小工具资源代理,就是在你的静态URL前加上`/gadgets/proxy?url=`. 这儿有一个例子: 
+
+{{{ 
+<img border="0" 
+src="/gadgets/proxy?url=http://igoogleinfogadget.googlecode.com/svn/trunk/img_fallback/content_start.gif" 
+/> 
+}}} 
+
+你可以在CSS `background-image: url()`, `<script src=...>`等URL中使用同样的方法. 也可以使用[http://code.google.com/apis/opensocial/docs/0.8/reference/gadgets/#gadgets.io.getProxyUrl gadgets.io.getProxyUrl()] 方法动态计算代理的URL,这对任何通过JavaScript, AJAX, jQuery.load()等途径加载的资源都有效. 
+
+
+
+
+
+= 托管你的小工具 = 
+
+== 在Google Code上托管小工具 == 
+
+当然也可以直接托管项目仓库中的小工具. 在上面一个例子中, 文件: 
+
+{{{ 
+http://google-code-project-hosting-gadgets.googlecode.com/svn/trunk/examples/issueupdates_example.xml 
+}}} 
+
+只是一个存储在`google-code-project-hosting-gadgets`的 svn 仓库中的正常的文件,可以这么引用: 
+
+{{{ 
+<wiki:gadget url="http://google-code-project-hosting-gadgets.googlecode.com/svn/trunk/examples/issueupdates_example.xml" /> 
+}}} 
+
+如果你打算在代码库托管你的小工具和相关资源, though, 确定所有的资源可以通过[http://code.google.com/apis/gadgets/docs/reference/#gadgets.io.getProxyUrl gadget.io.getProxyUrl] 或 [http://code.google.com/apis/gadgets/docs/reference/#gadgets.io.makeRequest gadget.io.makeRequest]调用. 小工具自身可以被缓存, 但直接链接代码库中的文件会导致性能明显下降. 
+
+== 测试小工具 == 
+
+你应该在这些地方测试你的小工具: 
+
+* 在iGoogle: http://www.google.com/ig/add?moduleurl=http://www.google.com/ig/modules/horoscope.xml&up_sign=Capricorn 
+* 在创建者(creator)中: http://www.gmodules.com/ig/creator?url=http://www.google.com/ig/modules/horoscope.xml&up_sign=Taurus 
+* 在Wiki上: <wiki:gadget .../> 
+
+
+在多种浏览器中测试一下, 在与小工具交互时请使用开启了错误报告功能的Firebug . 
+
+== 从你的网站推销小工具 == 
+
+推销小工具在iGoogle上的使用: 请查看[http://www.google.com/webmasters/add.html 添加到Google - 给托管者的信息]. 也可以添加提前定制的小工具: 
+
+{{{ 
+http://www.google.com/ig/add?moduleurl=http://www.google.com/ig/modules/horoscope.xml&up_sign=Capricorn 
+}}} 
+
+要促进小工具在任意第三方网站的嵌入使用, 使用创建者(creator). 你可以构建一个如下的URL来链接创建者: 
+
+{{{ 
+http://www.gmodules.com/ig/creator?url=http://www.google.com/ig/modules/horoscope.xml&up_sign=Taurus 
+}}} 
+
+注意 &up_= 变量只接受字符
+
+== 在iGoogle 目录中提升你的小工具 == 
+按照在 http://www.google.com/ig/submit 上的指导把你的小工具添加到iGoogle目录中. 一定要包含描述性的元数据,这样你的小工具才能更容易被找到. 
+
+= 集成其他Google产品 = 
+
+小工具允许更其他Google产品更紧密的集成. 比如说Google Docs, 可以输出适用于小工具的iframed的内容, 而Youtube 提供可以嵌入普通HTML小工具中的可嵌入Flash 的代码. 
+
+== Google文件表格和显示文稿(Docs Forms and Presentations) == 
+
+使用[http://docs.google.com/ Google Docs] 可以创建简单的可定制的反馈表格, 然后把它们嵌入到任何网页. 使用Google Docs提供的嵌入使用的代码: 
+
+{{{  
+<iframe src="http://spreadsheets.google.com/embeddedform?key=pcei2KUN61t4vbuSjTGjzNw" width="310" height="566" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe> 
+}}} 
+
+我们可以把内嵌框架(iframe)的内容转换到一个小工具: 
+
+{{{ 
+<?xml version="1.0" encoding="UTF-8" ?>  
+<Module> 
+<ModulePrefs title="Gadget Form Example" /> 
+<Content type="url" href="http://spreadsheets.google.com/embeddedform?key=pcei2KUN61t4vbuSjTGjzNw" /> 
+</Module> 
+}}} 
+
+然后再你的项目主页或Wiki页面中引用它: 
+
+{{{ 
+<wiki:gadget url="..." width="310" height="566" /> 
+}}} 
+
+也有相似的演示文稿嵌入代码(presentation), 允许在相关Wiki文档旁边插入演示文稿 . 
+
+== 嵌入 YouTube 视频 == 
+
+现在直接使用我们的视频小工具可以嵌入YouTube 和 Google Video 的视频: 
+
+{{{ 
+<wiki:gadget url="http://code.google.com/p/google-code-project-hosting-gadgets/source/browse/trunk/video/gcVideo.xml" up_video="..." /> 
+}}} 
+
+还有一个可以嵌入视频的short hand wiki标签. 更多信息请查看[http://code.google.com/p/support/wiki/WikiSyntax#Videos Wiki语法] . 
+
+== Google Groups == 
