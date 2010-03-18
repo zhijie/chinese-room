@@ -158,15 +158,15 @@ http://google-code-project-hosting-gadgets.googlecode.com/svn/trunk/examples/iss
 
 在多种浏览器中测试一下, 在与小工具交互时请使用开启了错误报告功能的Firebug . 
 
-== 从你的网站推销小工具 == 
+== 从你的网站推广小工具 == 
 
-推销小工具在iGoogle上的使用: 请查看[http://www.google.com/webmasters/add.html 添加到Google - 给托管者的信息]. 也可以添加提前定制的小工具: 
+推广小工具在iGoogle上的使用: 请查看[http://www.google.com/webmasters/add.html 添加到Google - 给托管者的信息]. 也可以添加提前定制的小工具: 
 
 {{{ 
 http://www.google.com/ig/add?moduleurl=http://www.google.com/ig/modules/horoscope.xml&up_sign=Capricorn 
 }}} 
 
-要促进小工具在任意第三方网站的嵌入使用, 使用创建者(creator). 你可以构建一个如下的URL来链接创建者: 
+要推广小工具在任意第三方网站的嵌入使用, 使用创建者(creator). 你可以构建一个如下的URL来链接创建者: 
 
 {{{ 
 http://www.gmodules.com/ig/creator?url=http://www.google.com/ig/modules/horoscope.xml&up_sign=Taurus 
