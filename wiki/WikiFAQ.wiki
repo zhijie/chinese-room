@@ -39,7 +39,7 @@ http://code.google.com/p/supportwikiFeedsshow=nav,content,sidebar
 == 谁可以添加编辑我的wiki? == 
 只有项目拥有者(owner)和提交者(committer)可以添加编辑这个项目的wiki页面. 
 
-== wiki的内容在哪儿存放着 == 
+== wiki的内容存放在哪儿? == 
 如果用的是Subversion , 所有的wiki页面放在项目Subversion 代码库的wiki目录下, 就是.wiki 结尾的文件(其他的文件和目录会被忽略). 这就是说你可以使用Subversion 客户端和你喜欢的文本编辑器编辑wiki页. 
 
 如果用的是 Mercurial ,wiki内容放在`http://wiki.[projectname].googlecode.comhg` ，`[projectname]` 是具体的的项目名. 
