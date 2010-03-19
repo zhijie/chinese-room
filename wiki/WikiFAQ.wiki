@@ -1,6 +1,7 @@
 #summary Wiki FAQ
-
-<wikitoc: max_depth=2>
+ #labels Restrict-AddWikiComment-Commit 
+  
+ <wiki:toc max_depth="2" />  
 
 == 在Google的wiki中使用的什么语法 == 
 Google的wiki 语法是受到MoinMoin wiki 语法的启发，或多或少是它的一个子集。我们发现MoinMoin 是最流行的开源wiki之一，它为用户提供了一个很简洁的语法.  
