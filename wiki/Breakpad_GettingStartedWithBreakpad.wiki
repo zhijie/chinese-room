@@ -12,7 +12,7 @@ Breakpad 有三个主要部分:
 
  * 客户端(*client*) 是一个可以包含在程序中的库. 它可以把当前线程的状态和已装载的可执行库跟共享库的标识符写进minidump文件. 你可以配置客户端在程序崩溃时写一个minidump或只有显式要求时才写.
 
- * 符号清洁工(*symbol dumper*)是一个读取编译器产生的信息的程序，它能在读取后产生一个符号文件(*symbol file*),这个文件的格式是[SymbolFiles Breakpad自己的格式].
+ * 符号清洁工(*symbol dumper*)是一个读取编译器产生的信息的程序，它能在读取后产生一个符号文件(*symbol file*),这个文件的格式是[Breakpad_SymbolFiles Breakpad自己的格式].
 
  * 处理器(*processor*)是也是一个程序，他读取minidump文件，并给minidump文件提到的可执行库和共享库找到合适的符号文件，然后产生一个可读的 C/C++ 堆栈记录.
 
@@ -38,7 +38,7 @@ Breakpad 在所有平台上使用 Windows minidump 文件, 而不是传统的内
 
 = minidump概观 =
 
-minidump 是通过调用 Breakpad库产生的. 默认情况下，初始化Breakpad会安装一个异常/信号处理器，这个处理器会在异常出现时会写一个minidump文件到硬盘. 在 Windows 上, 这是通过SetUnhandledExceptionFilter()`完成的; 在 OS X 上, 这是通过创建一个在Mach 异常端口的线程完成的; 在Linux 上, 这是通过安装多种异常（如`SIGILL, SIGSEGV`等）的信号处理句柄完成的.
+minidump 是通过调用 Breakpad库产生的. 默认情况下，初始化Breakpad会安装一个异常/信号处理器，这个处理器会在异常出现时会写一个minidump文件到硬盘. 在 Windows 上, 这是通过'SetUnhandledExceptionFilter()'完成的; 在 OS X 上, 这是通过创建一个在Mach 异常端口的线程完成的; 在Linux 上, 这是通过安装多种异常（如`SIGILL, SIGSEGV`等）的信号处理句柄完成的.
 
 在minidump文件产生后，每个平台都有稍微不同与其他平台的上传崩溃crash dump.  在 Windows和 Linux, 有一个独立的函数库可以调用去上传. 在 OS X, 如何设置好了，就会产生一个独立的进程，请求用户权限，然后发送这个文件.  
 
