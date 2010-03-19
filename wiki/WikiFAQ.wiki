@@ -7,11 +7,11 @@ Google的wiki 语法是受到!MoinMoin wiki 语法的启发，或多或少是它
 
 关于如何使用wiki语法的具体例子在wiki创建和编辑页的右手边的"Wiki Markup Help"框中有展示. 
 
-== 你们为什么不用已有的wiki系统，比如 !MoinMoin, TWiki, or MediaWiki? == 
+== 你们为什么不用已有的wiki系统，比如 !MoinMoin, TWiki, or !MediaWiki? == 
 大多数已有的wiki系统不能拓展到我们希望的尺寸和并发性, 所以我们不得不使用Google的基础设施设计一个能达到我们要求的wiki. 而且，我们相信最有用的工具是容易使用的并且能够很好集成到合作开发环境中的工具. 所以我们提供了能跟我们已有的工具一起使用的简单的wiki. 如果你的项目需要一些很专业的格式, 你可以链接到[http://sites.google.com Google Sites], [http://docs.google.com Google Docs and Spreadsheets], [http://groups-beta.google.com Google Groups],或别的页面. 
 
 == Google支持那些wiki特性? == 
-我们相信，简单有助于人们合作, 所以我们专注于最常用的格式编排特点. 我们支持标题、段落、符合列表、块引用和代码块的布局. 文本短句可以使用粗体、斜体、删除线、上标、下标或代码字体格式化. WikiWords 会自动被链接，也可以链接到URL或自定义链接文本. 我们支持显示数据的简单表格. 使用可选的#summary 和 #labels 行在文件顶部指定当前页面的元数据. Google wiki不支持子页面、附件、变量或宏。 
+我们相信，简单有助于人们合作, 所以我们专注于最常用的格式编排特点. 我们支持标题、段落、符合列表、块引用和代码块的布局. 文本短句可以使用粗体、斜体、删除线、上标、下标或代码字体格式化. !WikiWords 会自动被链接，也可以链接到URL或自定义链接文本. 我们支持显示数据的简单表格. 使用可选的#summary 和 #labels 行在文件顶部指定当前页面的元数据. Google wiki不支持子页面、附件、变量或宏。 
 
 == 如何给我的项目更新页面 == 
 点击项目的wiki 标签可以看到一个所有wiki页面的列表. 要添加新页面，你必须是项目拥有者或提交者，点击主标签下的工具栏的“新建页面"(New Page)链接. 这会带你到wiki编辑器，在那儿你可以添加内容或给wiki页面指定标签. 要编辑已有页面,先查看页面，然后点击工具栏中的“编辑页面”(Edit this page).  
