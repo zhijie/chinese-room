@@ -2,7 +2,7 @@
   
  <wiki:toc max_depth="2" />  
 
-== 在Google的wiki中使用的什么语法 == 
+== 在Google的wiki中使用的什么语法? == 
 Google的wiki 语法是受到!MoinMoin wiki 语法的启发，或多或少是它的一个子集。我们发现MoinMoin 是最流行的开源wiki之一，它为用户提供了一个很简洁的语法.  
 
 关于如何使用wiki语法的具体例子在wiki创建和编辑页的右手边的"Wiki Markup Help"框中有展示. 
@@ -13,20 +13,20 @@ Google的wiki 语法是受到!MoinMoin wiki 语法的启发，或多或少是它
 == Google支持那些wiki特性? == 
 我们相信，简单有助于人们合作, 所以我们专注于最常用的格式编排特点. 我们支持标题、段落、符合列表、块引用和代码块的布局. 文本短句可以使用粗体、斜体、删除线、上标、下标或代码字体格式化. !WikiWords 会自动被链接，也可以链接到URL或自定义链接文本. 我们支持显示数据的简单表格. 使用可选的#summary 和 #labels 行在文件顶部指定当前页面的元数据. Google wiki不支持子页面、附件、变量或宏。 
 
-== 如何给我的项目更新页面 == 
+== 如何给我的项目更新页面? == 
 点击项目的wiki 标签可以看到一个所有wiki页面的列表. 要添加新页面，你必须是项目拥有者或提交者，点击主标签下的工具栏的“新建页面"(New Page)链接. 这会带你到wiki编辑器，在那儿你可以添加内容或给wiki页面指定标签. 要编辑已有页面,先查看页面，然后点击工具栏中的“编辑页面”(Edit this page).  
 
-== 如何使用直接subversion编辑页面 == 
+== 如何使用直接subversion编辑页面? == 
 你也可以通过subversion直接添加或编辑页面,因为所有的wiki页面都在subversion 仓库的wiki目录下.  
 大多开发者只是检出(check out) trunk 目录. 如果也要复制wiki,可以使用这样的命令格式
 {{{svn checkout https:PROJECTNAME.googlecode.comsvnwiki PROJECTNAME-wiki --username USERNAME}}} 
 
 每一个wiki 页面都有在代码库中wiki目录下的一个对应的文件.  比如，有一个页面名为!UserGuide 会有一个!UserGuide.wiki在wiki文件夹中. 你可以通过编辑、删除或添加相应的文件来编辑、删除或添加wiki页面. .wiki 格式文件必须是遵循wiki语法的纯文本格式。目前wiki目录下其他的文件会被忽略. 
 
-== wiki是用来展示什么内容的 == 
+== wiki是用来展示什么内容的? == 
 项目路线图, 如何做, 安装注意, 和文档都是wiki可以写的内容的很好的例子. Wiki 页很容易让项目成员快速编辑并且比Email主题更容易找到, 所以用把你的团队经常使用和更新的文档放到wiki上. 
 
-== 能不能把wiki下载成HTML 文件 == 
+== 能不能把wiki下载成HTML 文件? == 
 
 对于每个页面，你可以通过添加show= parameter到URL中来只看页面的一部分. 比如
 http://code.google.com/p/supportwikiFeedsshow=content 
@@ -36,7 +36,7 @@ http://code.google.com/p/supportwikiFeedsshow=nav,content,sidebar
 
 也可以使用这个工具 [http://code.google.com/p/google-code-wiki-to-html google-code-wiki-to-html]. 
 
-== 谁可以添加编辑我的wiki == 
+== 谁可以添加编辑我的wiki? == 
 只有项目拥有者(owner)和提交者(committer)可以添加编辑这个项目的wiki页面. 
 
 == wiki的内容在哪儿存放着 == 
@@ -44,5 +44,5 @@ http://code.google.com/p/supportwikiFeedsshow=nav,content,sidebar
 
 如果用的是 Mercurial ,wiki内容放在`http://wiki.[projectname].googlecode.comhg` ，`[projectname]` 是具体的的项目名. 
 
-== 在哪儿可以看到wiki的缺陷 == 
+== 在哪儿可以看到wiki的缺陷? == 
 这是现有的关于wiki的问题的列表. 最大的问题是在wiki从代码库移除后wiki的缓存不会更新(比如，当代码库重置之后).  
