@@ -3,14 +3,14 @@
  <wiki:toc max_depth="2" />  
 
 == 在Google的wiki中使用的什么语法 == 
-Google的wiki 语法是受到MoinMoin wiki 语法的启发，或多或少是它的一个子集。我们发现MoinMoin 是最流行的开源wiki之一，它为用户提供了一个很简洁的语法.  
+Google的wiki 语法是受到!MoinMoin wiki 语法的启发，或多或少是它的一个子集。我们发现MoinMoin 是最流行的开源wiki之一，它为用户提供了一个很简洁的语法.  
 
 关于如何使用wiki语法的具体例子在wiki创建和编辑页的右手边的"Wiki Markup Help"框中有展示. 
 
-== 你们为什么不用已有的wiki系统，比如 MoinMoin, TWiki, or MediaWiki == 
-大多数已有的wiki系统不能拓展到我们希望的尺寸和并发性, 所以我们不得不使用Google的基础设施设计一个能达到我们要求的wiki. 而且，我们相信最有用的工具是容易使用的并且能够很好集成到合作开发环境中的工具. 所以我们提供了能跟我们已有的工具一起使用的简单的wiki. 如果你的项目需要一些很专业的格式, 你可以链接到[httpsites.google.com Google Sites], [httpdocs.google.com Google Docs and Spreadsheets], [httpgroups-beta.google.com Google Groups],或别的页面. 
+== 你们为什么不用已有的wiki系统，比如 !MoinMoin, TWiki, or MediaWiki? == 
+大多数已有的wiki系统不能拓展到我们希望的尺寸和并发性, 所以我们不得不使用Google的基础设施设计一个能达到我们要求的wiki. 而且，我们相信最有用的工具是容易使用的并且能够很好集成到合作开发环境中的工具. 所以我们提供了能跟我们已有的工具一起使用的简单的wiki. 如果你的项目需要一些很专业的格式, 你可以链接到[http://sites.google.com Google Sites], [http://docs.google.com Google Docs and Spreadsheets], [http://groups-beta.google.com Google Groups],或别的页面. 
 
-== Google支持那些wiki特性 == 
+== Google支持那些wiki特性? == 
 我们相信，简单有助于人们合作, 所以我们专注于最常用的格式编排特点. 我们支持标题、段落、符合列表、块引用和代码块的布局. 文本短句可以使用粗体、斜体、删除线、上标、下标或代码字体格式化. WikiWords 会自动被链接，也可以链接到URL或自定义链接文本. 我们支持显示数据的简单表格. 使用可选的#summary 和 #labels 行在文件顶部指定当前页面的元数据. Google wiki不支持子页面、附件、变量或宏。 
 
 == 如何给我的项目更新页面 == 
@@ -19,7 +19,7 @@ Google的wiki 语法是受到MoinMoin wiki 语法的启发，或多或少是它�
 == 如何使用直接subversion编辑页面 == 
 你也可以通过subversion直接添加或编辑页面,因为所有的wiki页面都在subversion 仓库的wiki目录下.  
 大多开发者只是检出(check out) trunk 目录. 如果也要复制wiki,可以使用这样的命令格式
-{{{svn checkout httpsPROJECTNAME.googlecode.comsvnwiki PROJECTNAME-wiki --username USERNAME}}} 
+{{{svn checkout https:PROJECTNAME.googlecode.comsvnwiki PROJECTNAME-wiki --username USERNAME}}} 
 
 每一个wiki 页面都有在代码库中wiki目录下的一个对应的文件.  比如，有一个页面名为!UserGuide 会有一个!UserGuide.wiki在wiki文件夹中. 你可以通过编辑、删除或添加相应的文件来编辑、删除或添加wiki页面. .wiki 格式文件必须是遵循wiki语法的纯文本格式。目前wiki目录下其他的文件会被忽略. 
 
@@ -29,12 +29,12 @@ Google的wiki 语法是受到MoinMoin wiki 语法的启发，或多或少是它�
 == 能不能把wiki下载成HTML 文件 == 
 
 对于每个页面，你可以通过添加show= parameter到URL中来只看页面的一部分. 比如
-httpcode.google.compsupportwikiFeedsshow=content 
-httpcode.google.compsupportwikiFeedsshow=content,nav 
-httpcode.google.compsupportwikiFeedsshow=content,comments 
-httpcode.google.compsupportwikiFeedsshow=nav,content,sidebar 
+http://code.google.compsupportwikiFeedsshow=content 
+http://code.google.compsupportwikiFeedsshow=content,nav 
+http://code.google.compsupportwikiFeedsshow=content,comments 
+http://code.google.compsupportwikiFeedsshow=nav,content,sidebar 
 
-也可以使用这个工具 [httpcode.google.compgoogle-code-wiki-to-html google-code-wiki-to-html]. 
+也可以使用这个工具 [http://code.google.compgoogle-code-wiki-to-html google-code-wiki-to-html]. 
 
 == 谁可以添加编辑我的wiki == 
 只有项目拥有者(owner)和提交者(committer)可以添加编辑这个项目的wiki页面. 
@@ -42,7 +42,7 @@ httpcode.google.compsupportwikiFeedsshow=nav,content,sidebar
 == wiki的内容在哪儿存放着 == 
 如果用的是Subversion , 所有的wiki页面放在项目Subversion 代码库的wiki目录下, 就是.wiki 结尾的文件(其他的文件和目录会被忽略). 这就是说你可以使用Subversion 客户端和你喜欢的文本编辑器编辑wiki页. 
 
-如果用的是 Mercurial ,wiki内容放在`httpwiki.[projectname].googlecode.comhg` ，`[projectname]` 是具体的的项目名. 
+如果用的是 Mercurial ,wiki内容放在`http://wiki.[projectname].googlecode.comhg` ，`[projectname]` 是具体的的项目名. 
 
 == 在哪儿可以看到wiki的缺陷 == 
 这是现有的关于wiki的问题的列表. 最大的问题是在wiki从代码库移除后wiki的缓存不会更新(比如，当代码库重置之后).  
