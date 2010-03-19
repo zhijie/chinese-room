@@ -111,7 +111,7 @@ Google Code 用户会使用这样的语句:
 同时, 使用用户偏爱值(user pref value)指定小工具的自定义,你的小工具在不同的嵌入方法中会有更高的可移植性: 
 
 * 在"添加你的网页"("add to your webpage")表格中, (http://www.gmodules.com/ig/creator?url=http://www.google.com/ig/modules/horoscope.xml) 用表格显示用户的偏好,以便于用户可以在得到代码片段前定制小工具. 
-* 在 iGoogle, 把 UserPref 的值填写到"编辑设置"("edit settings")窗口,这样,用户可以在加入小工具后改变查询. 
+* 在 iGoogle, 把 !UserPref 的值填写到"编辑设置"("edit settings")窗口,这样,用户可以在加入小工具后改变查询. 
 
 == 使用资源代理(Asset Proxy) == 
 
@@ -123,7 +123,7 @@ src="/gadgets/proxy?url=http://igoogleinfogadget.googlecode.com/svn/trunk/img_fa
 /> 
 }}} 
 
-你可以在CSS `background-image: url()`, `<script src=...>`等URL中使用同样的方法. 也可以使用[http://code.google.com/apis/opensocial/docs/0.8/reference/gadgets/#gadgets.io.getProxyUrl gadgets.io.getProxyUrl()] 方法动态计算代理的URL,这对任何通过'JavaScript', AJAX, jQuery.load()等途径加载的资源都有效. 
+你可以在CSS `background-image: url()`, `<script src=...>`等URL中使用同样的方法. 也可以使用[http://code.google.com/apis/opensocial/docs/0.8/reference/gadgets/#gadgets.io.getProxyUrl gadgets.io.getProxyUrl()] 方法动态计算代理的URL,这对任何通过!JavaScript, AJAX, jQuery.load()等途径加载的资源都有效. 
 
 
 
