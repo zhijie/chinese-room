@@ -29,12 +29,12 @@ Google的wiki 语法是受到!MoinMoin wiki 语法的启发，或多或少是它
 == 能不能把wiki下载成HTML 文件 == 
 
 对于每个页面，你可以通过添加show= parameter到URL中来只看页面的一部分. 比如
-http://code.google.compsupportwikiFeedsshow=content 
-http://code.google.compsupportwikiFeedsshow=content,nav 
-http://code.google.compsupportwikiFeedsshow=content,comments 
-http://code.google.compsupportwikiFeedsshow=nav,content,sidebar 
+http://code.google.com/p/supportwikiFeedsshow=content 
+http://code.google.com/p/supportwikiFeedsshow=content,nav 
+http://code.google.com/p/supportwikiFeedsshow=content,comments 
+http://code.google.com/p/supportwikiFeedsshow=nav,content,sidebar 
 
-也可以使用这个工具 [http://code.google.compgoogle-code-wiki-to-html google-code-wiki-to-html]. 
+也可以使用这个工具 [http://code.google.com/p/google-code-wiki-to-html google-code-wiki-to-html]. 
 
 == 谁可以添加编辑我的wiki == 
 只有项目拥有者(owner)和提交者(committer)可以添加编辑这个项目的wiki页面. 
