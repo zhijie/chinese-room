@@ -2,6 +2,7 @@
     * [IntroductionEn About Chinese-Room]
     * [Breakpad_Org google-breakpad]
         * [Breakpad_GettingStartedWithBreakpad Breakpad 入门指导]
+    * [Gflags_Org google-gflags]
     * [OrgPrettifier Javascript code prettifier]
         * [https://chinese-room.googlecode.com/svn/trunk/google-code-prettify/README-zh-Hans.html 自述文件]
     * [OrgProtobuf Protocol Buffers]
