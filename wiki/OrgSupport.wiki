@@ -8,6 +8,7 @@ http://code.google.com/p/support/
 = 翻译完毕的文档(already translated) =
  * [GettingStarted Getting Started ]
  * Wiki
+  * [WikiFAQ wiki FAQ]
   * <a herf="http://code.google.com/p/chinese-room/wiki/WikiSyntax">WikiSyntax</a>
   * [WorkingWithGoogleGadgets  Google Gadgets ]
    * [InterestingGadgets Interesting Gadgets ]
