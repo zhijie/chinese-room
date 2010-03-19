@@ -7,6 +7,7 @@ http://code.google.com/p/google-breakpad/
 
 = 翻译完毕的文档(already translated) =
 
+ *[Breakpad_GettingStartedWithBreakpad GettingStartedWithBreakpad]
 
 = 翻译状态 =
 
