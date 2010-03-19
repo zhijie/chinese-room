@@ -15,7 +15,7 @@
 无论是Google Code中的，还是Sourceforge上的，或是别的开源社区，只要您对见到了感兴趣的项目，而且想帮助大家学习使用，或者你对翻译比较感兴趣，那么就请您把翻译好的文档放到这里。这里是开源项目中文文档的一个集中营地，也有助于您的文档的推广。
 如果您对现有的文档组织或翻译有任何意见，请跟我们联系，我们会认真考虑您的意见。
 
-Group：http://groups.google.com.hk/group/Chinese-Room/
+Group：http://groups.google.hk/group/Chinese-Room/
 
 在这儿，我们一起发现新奇
 
