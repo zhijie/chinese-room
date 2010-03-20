@@ -22,5 +22,5 @@
             * [WorkingWithGoogleGadgets Google 小工具]
                 * [InterestingGadgets 有趣的工具]
          * 高级话题
-            *[Permissions permissions]
+            * [Permissions permissions]
             
