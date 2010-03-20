@@ -12,6 +12,7 @@
              * [Overview 概述]
         * [APIReference API参考]
     * [OrgSupport User Support for Project Hosting]
+        * [WhatsNew Whats New?]
         * [GettingStarted 入门指南]
         * [HowToJoinAProject 加入一个项目]
         * [SupportFAQ 项目托管常见问题]
@@ -20,7 +21,14 @@
             * [WikiFAQ Wiki常见问题]
             * [WikiSyntax Wiki语法]
             * [WorkingWithGoogleGadgets Google 小工具]
-                * [InterestingGadgets 有趣的工具]
+              * [InterestingGadgets 有趣的工具]
+        * 下载
+            * [ScriptedUploads Scripted Uploads]
+        * 源码
+            *[PostCommitWebHooks PostCommitWebHooks]
+          * Subversion
+             *[SubversionFAQ Subversion FAQ]
+           
         * 高级话题
             * [Permissions permissions]
             
