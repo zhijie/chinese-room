@@ -2,7 +2,13 @@
 
 = Introduction =
 
-Add your content here.
+在开放的资源软件开发中, 任何人都可以进入这个项目的源码  And, it's expected that the development process be
+transparent by allowing anyone to access all issues and project
+documentation.  That transparency allows potential users or
+contributors to educate themselves and evaluate the state of the
+project.  Transparency should be the rule for almost every project
+almost all the time.  Exceptions to the rule are rare but important,
+especially in large, very active projects..
 
 
 = Details =
@@ -11,10 +17,3 @@ Add your content here.  Format your content with:
   * Text in *bold* or _italic_
   * Headings, paragraphs, and lists
   * Automatic links to other wiki pages
-在开放的资源软件开发中, 任何人都可以进入这个项目的源码  And, it's expected that the development process be
-transparent by allowing anyone to access all issues and project
-documentation.  That transparency allows potential users or
-contributors to educate themselves and evaluate the state of the
-project.  Transparency should be the rule for almost every project
-almost all the time.  Exceptions to the rule are rare but important,
-especially in large, very active projects.
