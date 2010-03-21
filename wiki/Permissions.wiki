@@ -1,8 +1,8 @@
-综述怎样设定你的在项目中的容许性.
+==综述怎样设定你的在项目中的容许性==.
 
 = Introduction =
 
-在开放的资源软件开发中, '''任何人'''都可以进入这个项目的源码  And, it's expected that the development process be
+在开放的资源软件开发中,任何人都可以进入这个项目的源码  And, it's expected that the development process be
 transparent by allowing anyone to access all issues and project
 documentation.  That transparency allows potential users or
 contributors to educate themselves and evaluate the state of the
