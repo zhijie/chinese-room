@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+综述怎样设定你的在项目中的容许性.
 
 = Introduction =
 
