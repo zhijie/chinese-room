@@ -1,16 +1,15 @@
 #summary 工作流程说明
 
-*bold*欢迎加入 Chinese-Room！
+= 欢迎加入 Chinese-Room！=
 
 为了使我们能够和谐地在一起工作，我们给新加入的成员一些很有用的建议。
  * 1 为了更好地发布你翻译好的的文档，请先了解并掌握wiki 语法，并阅读Google Code项目托管指南：http://code.google.com/p/support/wiki/GettingStarted?tm=6或http://code.google.com/p/chinese-room/wiki/OrgSupport
  * 2 建议学习subversion的使用。基本的svn命令就可以满足我们的需要
  * 3 如何选择项目：一般意义下，你可以翻译任何你喜欢的项目。如果你想翻译而不知道翻译什么项目，可以给任何一个项目owner联系，他会帮你找一个较为合适的翻译项目
  * 4 如何下载项目文档：
-   # 对于wiki，可以使用svn。格式为
-svn checkout http://projectname.googlecode.com/svn/trunk/wiki/  projectname-wiki
-   # 其他格式文档，一般在项目下载中会有
-   # 个别情况，请联系我们的项目owner
+   *对于wiki，可以使用svn。格式为svn checkout http://projectname.googlecode.com/svn/trunk/wiki/  projectname-wiki
+   * 其他格式文档，一般在项目下载中会有
+   * 个别情况，请联系我们的项目owner
  * 5 如何给自己的劳动成果签名：根据签名方法的不同，我们要翻译的文档可分为两类，其一是Google wiki，就是.wiki 文件，其他的文件算另外一种，常见的格式有html、xml等
     * 对于Google wiki，在你创建一个页面时，wiki会给自动创建这个页面的人签名。所以如果你翻译的是wiki 文档，请自己创建页面。如何创建并编辑页面，请阅读Google Code项目托管指南。
     * 对于其他类文件，只能用subversion 发布我们的文档，但这种文档不会自动签名，所以你可以在文档中加入你的名字。一般情况下，我们的签名放在文档源作者的后面。如果源文档没有签名，你可以签在页面最下方合适的位置。所签名字一般为网名，也可以签自己的真名。签名格式一般为：
