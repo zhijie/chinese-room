@@ -21,7 +21,7 @@ Project Hosting on Google Code 为开源提供了一个自由协作的开发环�
 === 定制你的项目 === 
 
 使用 管理员(*Administer*) 标签定制项目. 这个标签只对项目所有者可见(project owners). 下列子标签在创建新项目时是有用的: 
-* 项目概要(*Project Summary*) 子标签 -- 你可以修改一些在创建时设置的选项, 包括建立博客(blogs), 分析学(analytics), 和自定义的项目标志(logo). 这也给项目提供了另外一个建立标签的机会,这有助于比人找到你的项目. 
+* 项目概要(*Project Summary*) 子标签 -- 你可以修改一些在创建时设置的选项, 包括建立博客(blogs), 分析学(analytics), 和自定义的项目标志(logo). 这也给项目提供了另外一个建立标签的机会,这有助于别人找到你的项目. 
 * 项目成员(*Project Members*) 子标签 -- 你在项目中可以添加新的拥有者(owners)或提交者(committers). 
 * 源码(*Source*) 子标签 -- 你可以选择非项目组成员修改代码. 
 
