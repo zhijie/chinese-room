@@ -1,0 +1,2 @@
+# Introduction #
+Chinese-room lives for the promotion of open source.It will help introduce excellent projects to Chinese programmers and students.If you hope your projects to be known by more Chinese programmers,please contact us and we will create Chinese documentations for your projects.

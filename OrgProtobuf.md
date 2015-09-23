@@ -1,0 +1,12 @@
+# 项目原址(primary website) #
+
+http://code.google.com/p/protobuf/
+
+
+# 翻译完毕的文档(already translated) #
+
+
+
+# 翻译状态 #
+
+进行中

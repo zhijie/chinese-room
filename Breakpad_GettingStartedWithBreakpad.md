@@ -1,0 +1,63 @@
+# 介绍 #
+
+Breakpad 既是一个函数库又是一个工具箱，它让你可以在发布应用程序给用户时移除编译器提供的调试信息，它会在一种简洁的"minidump"格式的文件中记录程序崩溃信息，并发送回你的服务器，而且可以从这些minidump文件中处理得到 C 和 C++ 堆栈记录(stack trace). Breakpad 也可以按要求给没有崩溃的程序写minidump文件.
+
+Breakpad 正被 Google Chrome, Firefox, Google Picasa, Camino, Google Earth 和别的一些项目使用.
+
+![http://google-breakpad.googlecode.com/svn/wiki/breakpad.png](http://google-breakpad.googlecode.com/svn/wiki/breakpad.png)
+
+Breakpad 有三个主要部分:
+
+  * 客户端(**client**) 是一个可以包含在程序中的库. 它可以把当前线程的状态和已装载的可执行库跟共享库的标识符写进minidump文件. 你可以配置客户端在程序崩溃时写一个minidump或只有显式要求时才写.
+
+  * 符号清洁工(**symbol dumper**)是一个读取编译器产生的信息的程序，它能在读取后产生一个符号文件(**symbol file**),这个文件的格式是[Breakpad自己的格式](Breakpad_SymbolFiles.md).
+
+  * 处理器(**processor**)是也是一个程序，他读取minidump文件，并给minidump文件提到的可执行库和共享库找到合适的符号文件，然后产生一个可读的 C/C++ 堆栈记录.
+
+# minidump文件格式 #
+
+minidump文件格式类似于微软为崩溃上传功能(crash-uploading facility)开发的内核文件(core files). minidump 文件包含:
+
+  * 一个在垃圾场(dump)创建时系统加载的可执行库和共享库的列表. 这个列表包含文件名和已装载版本的文件的标识符.
+
+  * 当前进程中的线程列表. 对于每一个线程, minidump 文件包含了处理器的寄存器的状态和线程的堆栈内存. 这些数据是不能解读的字节流, 因为Breakpad 客户端一般没有可用的调试信息来产生函数名或行号，甚至识别堆栈框架的边界.
+
+  * 收集到的创建垃圾场的系统的其他信息: 处理器、操作系统版本和垃圾场产生原因等等.
+
+Breakpad 在所有平台上使用 Windows minidump 文件, 而不是传统的内核文件(core files), 有这些原因:
+
+  * 内核文件会很大，这使得把它们通过网络传送到收集器端进行处理很不使用. Minidump 文件更小，因为它们就是为了这么用而设计的.
+
+  * 核心文件格式不规范. 比如, Linux标准库(Linux Standards Base) 没有描述寄存器是如何存储在 `PT_NOTE` 段中的.
+
+  * 与让别的机器写minidump文件相比，让windows机器处理核心会更难.
+
+  * 它使 Breakpad 处理器简化到只需支持一种文件格式.
+
+# minidump概观 #
+
+minidump 是通过调用 Breakpad库产生的. 默认情况下，初始化Breakpad会安装一个异常/信号处理器，这个处理器会在异常出现时会写一个minidump文件到硬盘. 在 Windows 上, 这是通过`SetUnhandledExceptionFilter()`完成的; 在 OS X 上, 这是通过创建一个在Mach 异常端口的线程完成的; 在Linux 上, 这是通过安装多种异常（如`SIGILL, SIGSEGV`等）的信号处理句柄完成的.
+
+在minidump文件产生后，每个平台都有稍微不同与其他平台的上传崩溃crash dump.  在 Windows和 Linux, 有一个独立的函数库可以调用去上传. 在 OS X, 如何设置好了，就会产生一个独立的进程，请求用户权限，然后发送这个文件.
+
+# 术语(Terminolog) #
+
+**进程内(In-process) vs. 进程外(out-of-process)异常处理** - 一般认为在崩溃的进程中写minidump文件不安全- 关键进程数据结构会被破坏，或者异常处理句柄所在堆栈会被覆盖，等等。所有三个平台都支持进程外异常处理.
+
+# 综合描述(Integration overview) #
+
+## Breakpad 代码概观 ##
+
+所有的客户端 代码都能通过访问在http://code.google.com/p/google-breakpad 上的Google 项目. 下面的目录结构在 src 目录中:
+
+  * `processor` 包含了只在服务器端使用的 minidump处理代码
+  * `client` 包含了所有平台的客户端产生minidump的函数库。
+  * `tools` 包含了每个平台下编译一系列工具的源码和工程。
+
+(在别的目录中)
+
+  * <a href='http://code.google.com/p/google-breakpad/wiki/WindowsClientIntegration'>Windows Integration Guide</a>
+
+## 建立进程的细节(符号产生) ##
+
+这可用于所有的平台。在`src/tools/{platform}/dump_syms` 中是一个可以读取各个平台下调试信息和产生Breakpad 符号文件的的工具(如 X/Linux的DWARF 和 STABS, Windows的PDB 文件)，它还能产生一个Breakpad符号文件.  这个工具在剥离之前在运行(on your binary before it's stripped)(在OS X/Linux上) 而且符号文件要放在minidump 处理器可以找的到的地方.有另外一个工具, `symupload`，如果你写了可以接收它们的服务器,可以用来上传符号文件.

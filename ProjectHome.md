@@ -1,0 +1,3 @@
+[![](http://code.google.com/images/code_sm.png)](http://code.google.com/)  中文屋将为广大开源爱好者介绍更多的优秀的项目。旨在为中国众多程序员和学生提供一个学习优秀程序的平台。同时欢迎更多的开源爱好者参与进来，推动开源在中国的发展。
+
+> Chinese-room lives for the promotion of open source.It will help introduce excellent projects to Chinese programmers and students.If you hope your projects to be known by more Chinese programmers,please contact us and we will create Chinese documentations for your projects.
